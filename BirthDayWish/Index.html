@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <audio id="rocketSound" src="ro.wav"></audio>
+	<!-- <audio id="explosionSound" src="Ex.wav"></audio> -->
+    <div class="header">
+        <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <!-- <li><a href="about.html">About</a></li> -->
+              <li><a href="photo.html">Photos</a></li>
+              <!-- <li><a href="#">Videos</a></li> -->
+            </ul>
+          </nav>
+          
+        <h1>Happy Birthday Anubhuti Di!</h1>
+    </div>
+    <div class="content">
+        <div class="animation">
+			<div id="rocket"></div>
+        </div>
+        <div class="message">
+            Happy birthday, Anubhuti Di! Wishing you success, joy, and all the best on your special day. Keep shining
+            bright and chasing your dreams. Have a wonderful birthday!
+        </div>
+        <div class="guestbook">
+
+        </div>
+    </div>
+  
+    
+    <button onclick="shoot()" class="shoot-button">Shoot!</button>
+    <div class="footer">
+        <a href="Index.html" class="go-back">Add Rockets</a>
+        <p>Copyright &copy; 2023 | All rights reserved</p>
+    </div>
+    <script>
+        function shoot() {
+            var rocket = document.getElementById("rocket");
+            var rocketSound = document.getElementById("rocketSound");
+            var explosionSound = document.getElementById("explosionSound");
+            rocketSound.play();
+            rocket.classList.add("blastoff");
+            rocketSound.addEventListener('ended', function() {
+                alert("Happy Birthday ANUBHUTI DI!");
+                rocketSound.pause();
+                explosionSound.play();
+                rocket.classList.remove("blastoff");
+                rocket.classList.add("explode");
+                setTimeout(function() {
+                    rocket.classList.remove("explode");
+                    location.reload();
+                }, 1000);
+            }, false);
+        }
+        
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

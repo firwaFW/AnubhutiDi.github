@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #f6e58d;
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.animation {
+    flex: 1;
+    text-align: center;
+}
+
+.message {
+    flex: 1;
+    text-align: center;
+}
+
+.guestbook {
+    flex: 1;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f6e58d;
+    text-align: center;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .footer {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .footer {
+        margin-top: 390px;
+    }
+}
+
+/* 
+#rocket {
+    width: 100px;
+    height: 150px;
+    background-image: url("rocket.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+#rocket.blastoff {
+    bottom: 100%;
+}
+
+#rocket.explode {
+    background-image: url("explosion.png");
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease-in-out;
+} */
+
+
+#rocket {
+    width: 100px;
+    height: 150px;
+    background-image: url("rocket.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+#rocket.blastoff {
+    bottom: 100%;
+}
+
+#rocket.explode {
+    background-image: url("explosion.png");
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease-in-out;
+}
+
+.shoot-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+
+.shoot-button:hover {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse 1s infinite;
+}
+
+
+
+nav {
+    background-color: #f6e58d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 0 10px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+a:hover {
+    background-color: #333;
+    color: #f6e58d;
+}
+
+.photo-page {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 150px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.gallery img {
+    max-width: 30%;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo-page h2 {
+    padding: 20px;
+    color: #20b59f;
+    font-size: 30px;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+
+.photo-page h2:hover {
+    color: #206bb5;
+    font-size: 35px;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+
+.go-back {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #1abc9c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.go-back:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.go-back:active {
+    transform: translateY(0px);
+    box-shadow: none;
+}
+
+.go-back:before {
+    content: "<";
+    display: inline-block;
+    margin-right: 10px;
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in-out;
+}
+
+.go-back:hover::before {
+    transform: rotate(0deg);
+}
+
+
+
+
+.portfolio {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    margin-bottom: 30px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.1);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    margin-bottom: 10px;
+}
+
+.portfolio-overlay p {
+    margin-bottom: 20px;
+}
+
+.portfolio-overlay a {
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.portfolio-overlay a:hover {
+    background-color: #f44336;
+}
